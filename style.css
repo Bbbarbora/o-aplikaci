@@ -12,3 +12,25 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
+
+/* Tmavý motív pre Barborku */
+.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Svetlý motív pre Štěpánku */
+.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-theme .btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.light-theme .btn {
+  border-color: #000;
+  color: #000;
+}
