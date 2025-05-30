@@ -3,12 +3,20 @@ const dog = document.querySelector('.dog');
 
 setInterval(() => {
     // Získaj aktuálnu pozíciu psíka
-    const dogLeft = dog.getBoundingClientRect().left;
+    const dogRect = dog.getBoundingClientRect();
+    const sceneRect = scene.getBoundingClientRect(); // pridáme aj scénu
+
+    const poopX = dogRect.left - sceneRect.left + 30;
+    const poopY = dogRect.top - sceneRect.top + 90;
 
     // Vytvor hovienko
     const poop = document.createElement('div');
     poop.classList.add('poop');
-    poop.style.left = `${dogLeft + 20}px`; // trochu za psíka
+    poop.style.left = `${poopX}px`;
+    poop.style.top = `${poopY}px`;
+
+
+
 
     scene.appendChild(poop);
 

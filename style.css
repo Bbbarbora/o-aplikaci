@@ -75,15 +75,15 @@ html {
 /* 🐶 Psík so sprite animáciou */
 .dog {
   position: absolute;
-  bottom: 0;
-  left: -60px;
-  width: 60px;
-  height: 60px;
-  background-image: url('imgs/dog-sprite.png'); /* cesta k tvojmu sprite */
+  bottom: 50px;
+  left: -164px;
+  width: 164px;
+  height: 136px;
+  background-image: url('imgs/walk_right.png'); /* cesta k tvojmu sprite */
   background-repeat: no-repeat;
   animation:
     dogRun 6s linear infinite,
-    dogSprite 1s steps(6) infinite;
+    dogSprite 1s steps(8) infinite;
 }
 
 /* Pohyb sprava doľava */
@@ -102,7 +102,7 @@ html {
     background-position: 0 0;
   }
   100% {
-    background-position: -360px 0;
+    background-position: -1312px 0;
   }
 }
 
@@ -114,12 +114,15 @@ html {
   background-image: url('imgs/poop.png'); /* cesta k obrázku hovienka */
   background-size: contain;
   background-repeat: no-repeat;
-  animation: dropPoop 2s ease-in forwards;
+  animation: dropPoop 2s ease-out forwards;
 }
+
+
+
 
 @keyframes dropPoop {
   0% {
-    transform: translateY(0);
+    transform: translateY(-20px);
     opacity: 0;
   }
   30% {
